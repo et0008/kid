@@ -8,14 +8,16 @@
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
        ">
 
-
-       <context:component-scan base-package="com.etoak.site.controller"/>
+       <context:component-scan base-package="com.etoak.site"/>
        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
               <property name="prefix" value="/WEB-INF/view/"/>
               <property name="suffix" value=".jsp"/>
               <property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
        </bean>
        <mvc:annotation-driven />
+
+       <!--<context:property-placeholder location="jdbc.properties"/>-->
+
 
 
 </beans>
