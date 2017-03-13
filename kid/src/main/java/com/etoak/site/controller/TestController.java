@@ -3,6 +3,7 @@ package com.etoak.site.controller;
 import com.etoak.site.bean.Kid;
 import com.etoak.site.service.Testservice;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class TestController {
     @Autowired
     private Testservice testservice;
+
 
     @RequestMapping(value = "/index")
     public String index(){

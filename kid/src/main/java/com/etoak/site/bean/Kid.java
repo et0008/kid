@@ -1,8 +1,8 @@
 package com.etoak.site.bean;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -11,11 +11,14 @@ import java.io.Serializable;
 @Entity
 @Table(name="KID")
 public class Kid implements Serializable{
-    @Column(length = 36)
+    @Id
+    @GeneratedValue(generator = "generator")
+    @GenericGenerator(name="generator",strategy = "uuid.hex")
+    @Column(name = "id")
     private String id;
-    @Column(length = 30)
+    @Column(name = "name",length = 30)
     private String name;
-    @Column(length = 3)
+    @Column(name = "age",length = 3)
     private String age;
 
     public String getName() {
