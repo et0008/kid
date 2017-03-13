@@ -64,11 +64,7 @@
     <version>3.6.1.Final</version>
   </dependency>
 
-    <dependency>
-      <groupId>org.hibernate</groupId>
-      <artifactId>hibernate-annotations</artifactId>
-      <version>3.2.0</version>
-    </dependency>
+
 
 
     <dependency>
@@ -97,16 +93,32 @@
     </dependency>
 
     <dependency>
+      <groupId>jboss</groupId>
+      <artifactId>javassist</artifactId>
+      <version>3.7.ga</version>
+    </dependency>
+
+     <!--自定义jar   start-->
+
+   <dependency>
       <groupId>oracle</groupId>
       <artifactId>oracle</artifactId>
       <version>1.0</version>
     </dependency>
 
     <dependency>
-      <groupId>jboss</groupId>
-      <artifactId>javassist</artifactId>
-      <version>3.7.ga</version>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-annotations</artifactId>
+      <version>3.2.0</version>
     </dependency>
+    <dependency>
+      <groupId>opencv</groupId>
+      <artifactId>opencv</artifactId>
+      <version>320</version>
+    </dependency>
+
+
+    <!--自定义jar   end-->
 
   </dependencies>
   <build>
