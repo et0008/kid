@@ -98,6 +98,18 @@
       <version>3.7.ga</version>
     </dependency>
 
+    <!--java发送邮件-->
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>javax.mail-api</artifactId>
+      <version>1.5.6</version>
+    </dependency>
+    <dependency>
+      <groupId>com.sun.mail</groupId>
+      <artifactId>javax.mail</artifactId>
+      <version>1.5.6</version>
+    </dependency>
+
      <!--自定义jar   start-->
 
    <dependency>
@@ -111,6 +123,7 @@
       <artifactId>hibernate-annotations</artifactId>
       <version>3.2.0</version>
     </dependency>
+
     <dependency>
       <groupId>opencv</groupId>
       <artifactId>opencv</artifactId>

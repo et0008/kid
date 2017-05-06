@@ -25,5 +25,8 @@
         <module name="kid" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="1.8">
+      <module name="kid" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

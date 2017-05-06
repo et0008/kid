@@ -3,7 +3,6 @@ package com.etoak.site.controller;
 import com.etoak.site.bean.Kid;
 import com.etoak.site.service.Testservice;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.HibernateTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -19,11 +18,12 @@ public class TestController {
     @RequestMapping(value = "/index")
     public String index(){
         Kid kid = new Kid();
-        kid.setAge("20");
-        kid.setId("1");
+        kid.setAge("10");
+        kid.setId("4028df815aeb6eea015aeb704f850003");
         kid.setName("kid");
-        String aa = testservice.addTest(kid);
-        System.out.println(aa);
-        return "index";
+        //testservice.delete(kid);
+        System.out.println("222");
+        System.out.println("5555555555");
+        return "indexpage";
     }
 }

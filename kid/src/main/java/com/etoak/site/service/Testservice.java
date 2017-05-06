@@ -7,4 +7,6 @@ import com.etoak.site.bean.Kid;
  */
 public interface Testservice {
     String addTest(Kid kid);
+    void update(Kid kid);
+    void delete(Kid kid);
 }

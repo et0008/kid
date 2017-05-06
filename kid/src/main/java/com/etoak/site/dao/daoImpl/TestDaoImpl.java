@@ -1,12 +1,13 @@
 package com.etoak.site.dao.daoImpl;
 
-import com.etoak.site.bean.Kid;
+
+import com.etoak.site.dao.DBHelper;
+import com.etoak.site.dao.IBaseDao;
 import com.etoak.site.dao.TestDao;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.orm.hibernate3.HibernateTemplate;
-import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
+
+import java.io.Serializable;
+import java.util.List;
 
 
 /**
@@ -14,15 +15,41 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository
-public class TestDaoImpl implements TestDao {
-
-//    @Autowired(required=false)
-    @Autowired
-    private HibernateTemplate ht;
+public class TestDaoImpl extends DBHelper implements TestDao{
 
     @Override
-    public String addTest(Kid kid) {
-        ht.save(kid);
-        return "111";
+    public Object save(Object entity) {
+        IBaseDao ibasedao =  this.getiBaseDao();
+        return ibasedao.save(entity);
+    }
+
+    @Override
+    public void delete(Object entity) {
+        this.getiBaseDao().delete(entity);
+    }
+
+    @Override
+    public void update(Object entity) {
+        this.getiBaseDao().update(entity);
+    }
+
+    @Override
+    public Object findById(Class clazz, Serializable id) {
+        return this.getiBaseDao().findById(clazz,id);
+    }
+
+    @Override
+    public List findBySql(String sql) {
+        return this.getiBaseDao().findBySql(sql);
+    }
+
+    @Override
+    public List findBySql(String sql, Object[] value) {
+        return this.getiBaseDao().findBySql(sql,value);
+    }
+
+    @Override
+    public List queryByPage(String sql, int beginIndex, int pageSize) {
+        return this.getiBaseDao().queryByPage(sql,beginIndex,pageSize);
     }
 }
