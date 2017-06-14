@@ -8,7 +8,7 @@ import java.util.List;
  * 线程协助-生产者/消费者------鸡蛋先放后取
  */
 public class Test1 {
-    List<Object> eggs = new ArrayList<>();
+    List<Object> eggs = new ArrayList<Object>();
 
     public synchronized Object getEgg(){
         while (eggs.size() == 0){

@@ -34,7 +34,7 @@ public class Test {
             numRead = fis.read(buffer);
             if (numRead > 0) {
                 complete.update(buffer, 0, numRead);
-／／／／／／／／／／／／／／／／／／／／／／sys
+
             }
         } while (numRead != -1);
         fis.close();

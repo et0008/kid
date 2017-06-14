@@ -10,7 +10,7 @@
 </body>
 <script type="text/javascript">
     function aaa(){
-        alert(1111);
+        //alert(1111);
     }
 
 </script>
